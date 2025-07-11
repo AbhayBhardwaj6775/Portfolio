@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, Github, ExternalLink, Mail, Phone, MapPin, Download, Code, Brain, Database, Zap } from 'lucide-react';
@@ -8,6 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { toast } from '@/hooks/use-toast';
+import ContactSection from '@/components/ContactSection';
 
 const Index = () => {
   const [currentRole, setCurrentRole] = useState(0);
@@ -275,73 +275,9 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              Get In Touch
-            </h2>
-            <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
-              <div>
-                <h3 className="text-2xl font-semibold mb-6 text-white">Let's Connect</h3>
-                <div className="space-y-4 text-left">
-                  <div className="flex items-center space-x-3">
-                    <Mail className="h-5 w-5 text-cyan-400" />
-                    <span className="text-gray-300">abhay.bhardwaj@email.com</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <Phone className="h-5 w-5 text-cyan-400" />
-                    <span className="text-gray-300">+91 12345 67890</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <MapPin className="h-5 w-5 text-cyan-400" />
-                    <span className="text-gray-300">India</span>
-                  </div>
-                </div>
-                <div className="flex space-x-4 mt-6">
-                  <Button variant="outline" size="sm" className="border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900">
-                    <Github className="h-4 w-4" />
-                  </Button>
-                  <Button variant="outline" size="sm" className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white">
-                    <Code className="h-4 w-4" />
-                  </Button>
-                  <Button variant="outline" size="sm" className="border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-slate-900">
-                    <Database className="h-4 w-4" />
-                  </Button>
-                </div>
-              </div>
-              <form onSubmit={handleContactSubmit} className="space-y-4">
-                <Input
-                  placeholder="Your Name"
-                  className="bg-slate-900/50 border-purple-500/20 text-white placeholder-gray-400"
-                  required
-                />
-                <Input
-                  type="email"
-                  placeholder="Your Email"
-                  className="bg-slate-900/50 border-purple-500/20 text-white placeholder-gray-400"
-                  required
-                />
-                <Textarea
-                  placeholder="Your Message"
-                  rows={4}
-                  className="bg-slate-900/50 border-purple-500/20 text-white placeholder-gray-400"
-                  required
-                />
-                <Button type="submit" className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600">
-                  Send Message
-                </Button>
-              </form>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <div id="contact">
+        <ContactSection />
+      </div>
 
       {/* Footer */}
       <footer className="bg-slate-900 py-8 border-t border-purple-500/20">
