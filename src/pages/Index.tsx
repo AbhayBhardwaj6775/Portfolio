@@ -8,6 +8,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { toast } from '@/hooks/use-toast';
 import ContactSection from '@/components/ContactSection';
+import InterpersonalSkills from '@/components/InterpersonalSkills';
 
 const Index = () => {
   const [currentRole, setCurrentRole] = useState(0);
@@ -80,7 +81,7 @@ const Index = () => {
               Abhay Bhardwaj
             </motion.h1>
             <div className="hidden md:flex space-x-6">
-              {["About", "Tech Stack", "Projects", "Contact"].map((item) => (
+              {["About", "Tech Stack", "Interpersonal Skills", "Projects", "Contact"].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase().replace(' ', '-')}`}
@@ -215,6 +216,11 @@ const Index = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Interpersonal Skills Section */}
+      <div id="interpersonal-skills">
+        <InterpersonalSkills />
+      </div>
 
       {/* Projects Section */}
       <section id="projects" className="py-20">
