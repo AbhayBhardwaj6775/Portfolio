@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Github, Linkedin, Code, Trophy, Users } from 'lucide-react';
@@ -19,42 +18,42 @@ const ContactSection = () => {
     {
       name: 'Email',
       icon: Mail,
-      href: 'mailto:abhay.bhardwaj@email.com',
+      href: 'mailto:bhardwajabhay6775@gmail.com',
       color: 'text-cyan-400 hover:text-cyan-300',
       bgColor: 'hover:bg-cyan-400/10'
     },
     {
       name: 'LinkedIn',
       icon: Linkedin,
-      href: 'https://linkedin.com/in/abhay-bhardwaj',
+      href: 'https://www.linkedin.com/in/abhay-bhardwaj-822491259/',
       color: 'text-blue-400 hover:text-blue-300',
       bgColor: 'hover:bg-blue-400/10'
     },
     {
       name: 'GitHub',
       icon: Github,
-      href: 'https://github.com/abhay-bhardwaj',
+      href: 'https://github.com/AbhayBhardwaj6775?tab=repositories',
       color: 'text-purple-400 hover:text-purple-300',
       bgColor: 'hover:bg-purple-400/10'
     },
     {
       name: 'LeetCode',
       icon: Code,
-      href: 'https://leetcode.com/abhay-bhardwaj',
+      href: 'https://leetcode.com/u/bhardwajAbhay/',
       color: 'text-orange-400 hover:text-orange-300',
       bgColor: 'hover:bg-orange-400/10'
     },
     {
       name: 'Codeforces',
       icon: Trophy,
-      href: 'https://codeforces.com/profile/abhay-bhardwaj',
+      href: 'https://codeforces.com/profile/abhaybhardwaj112',
       color: 'text-red-400 hover:text-red-300',
       bgColor: 'hover:bg-red-400/10'
     },
     {
       name: 'CodeChef',
       icon: Users,
-      href: 'https://codechef.com/users/abhay_bhardwaj',
+      href: 'https://www.codechef.com/users/bhardwajabhay1',
       color: 'text-yellow-400 hover:text-yellow-300',
       bgColor: 'hover:bg-yellow-400/10'
     }
@@ -162,7 +161,7 @@ const ContactSection = () => {
                     <span className="font-medium text-foreground">Direct Email</span>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    abhay.bhardwaj@email.com
+                    bhardwajabhay6775@gmail.com
                   </p>
                 </div>
               </CardContent>
