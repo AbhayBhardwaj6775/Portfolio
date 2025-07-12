@@ -13,7 +13,7 @@ import TechnicalSkills from '@/components/TechnicalSkills';
 
 const Index = () => {
   const [currentRole, setCurrentRole] = useState(0);
-  const roles = ["AI Developer", "MERN Stack Builder", "Problem Solver"];
+  const roles = ["AI Developer", "MERN Stack Builder", "Problem Solver", "DSA Expert"];
 
   useEffect(() => {
     const interval = setInterval(() => {
