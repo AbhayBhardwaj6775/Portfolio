@@ -9,6 +9,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { toast } from '@/hooks/use-toast';
 import ContactSection from '@/components/ContactSection';
 import InterpersonalSkills from '@/components/InterpersonalSkills';
+import TechnicalSkills from '@/components/TechnicalSkills';
 
 const Index = () => {
   const [currentRole, setCurrentRole] = useState(0);
@@ -81,7 +82,7 @@ const Index = () => {
               Abhay Bhardwaj
             </motion.h1>
             <div className="hidden md:flex space-x-6">
-              {["About", "Tech Stack", "Interpersonal Skills", "Projects", "Contact"].map((item) => (
+              {["About", "Technical Skills", "Interpersonal Skills", "Projects", "Contact"].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase().replace(' ', '-')}`}
@@ -182,6 +183,11 @@ const Index = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Technical Skills Section */}
+      <div id="technical-skills">
+        <TechnicalSkills />
+      </div>
 
       {/* Tech Stack Section */}
       <section id="tech-stack" className="py-20 bg-slate-800/50">
