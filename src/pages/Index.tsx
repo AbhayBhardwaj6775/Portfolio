@@ -1,18 +1,15 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ChevronDown, Github, ExternalLink, Mail, Phone, MapPin, Download, Code, Brain, Database, Zap } from 'lucide-react';
+import { ChevronDown, Mail, Download, Code, Brain, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
 import { toast } from '@/hooks/use-toast';
 import ContactSection from '@/components/ContactSection';
 import InterpersonalSkills from '@/components/InterpersonalSkills';
 import TechnicalSkills from '@/components/TechnicalSkills';
 import Certifications from '@/components/Certifications';
 import AcademicProjects from '@/components/AcademicProjects';
+import Internships from '@/components/Internships';
 
 const Index = () => {
   const [currentRole, setCurrentRole] = useState(0);
@@ -36,41 +33,6 @@ const Index = () => {
     { name: "Git", icon: "📦", category: "Tools" }
   ];
 
-  const projects = [
-    {
-      title: "AI-Powered Task Manager",
-      description: "Smart task management system using machine learning to predict deadlines and prioritize tasks automatically.",
-      tags: ["React", "Python", "TensorFlow", "MongoDB"],
-      liveLink: "#",
-      demoLink: "#",
-      image: "🤖"
-    },
-    {
-      title: "Real-time Chat Application",
-      description: "Full-stack MERN chat app with real-time messaging, file sharing, and user authentication.",
-      tags: ["React", "Node.js", "Socket.io", "MongoDB"],
-      liveLink: "#",
-      demoLink: "#",
-      image: "💬"
-    },
-    {
-      title: "Competitive Programming Tracker",
-      description: "Track and analyze competitive programming progress across multiple platforms with data visualization.",
-      tags: ["React", "Node.js", "Chart.js", "APIs"],
-      liveLink: "#",
-      demoLink: "#",
-      image: "📊"
-    }
-  ];
-
-  const handleContactSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon!",
-    });
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       {/* Navigation */}
@@ -85,7 +47,7 @@ const Index = () => {
               Abhay Bhardwaj
             </motion.h1>
             <div className="hidden md:flex space-x-6">
-              {["About", "Technical Skills", "Interpersonal Skills", "Certifications", "Academic Projects", "Projects", "Contact"].map((item) => (
+              {["About", "Technical Skills", "Interpersonal Skills", "Certifications", "Academic Projects", "Internships", "Contact"].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase().replace(' ', '-')}`}
@@ -241,63 +203,10 @@ const Index = () => {
         <AcademicProjects />
       </div>
 
-      {/* Projects Section */}
-      <section id="projects" className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              My Projects
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {projects.map((project, index) => (
-                <motion.div
-                  key={project.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ scale: 1.02 }}
-                >
-                  <Card className="bg-slate-900/50 border-purple-500/20 hover:border-cyan-400/50 transition-all duration-300 h-full">
-                    <CardHeader>
-                      <div className="text-4xl mb-4">{project.image}</div>
-                      <CardTitle className="text-white">{project.title}</CardTitle>
-                      <CardDescription className="text-gray-300">
-                        {project.description}
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        {project.tags.map((tag) => (
-                          <Badge key={tag} variant="secondary" className="bg-purple-900/50 text-purple-300">
-                            {tag}
-                          </Badge>
-                        ))}
-                      </div>
-                      <div className="flex space-x-3">
-                        <Button size="sm" className="bg-cyan-500 hover:bg-cyan-600">
-                          <ExternalLink className="mr-2 h-3 w-3" />
-                          Live Demo
-                        </Button>
-                        <Button size="sm" variant="outline" className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white">
-                          <Github className="mr-2 h-3 w-3" />
-                          Code
-                        </Button>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      {/* Internships Section */}
+      <div id="internships">
+        <Internships />
+      </div>
 
       {/* Contact Section */}
       <div id="contact">
