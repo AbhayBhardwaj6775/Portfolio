@@ -10,6 +10,7 @@ import { toast } from '@/hooks/use-toast';
 import ContactSection from '@/components/ContactSection';
 import InterpersonalSkills from '@/components/InterpersonalSkills';
 import TechnicalSkills from '@/components/TechnicalSkills';
+import Certifications from '@/components/Certifications';
 
 const Index = () => {
   const [currentRole, setCurrentRole] = useState(0);
@@ -82,7 +83,7 @@ const Index = () => {
               Abhay Bhardwaj
             </motion.h1>
             <div className="hidden md:flex space-x-6">
-              {["About", "Technical Skills", "Interpersonal Skills", "Projects", "Contact"].map((item) => (
+              {["About", "Technical Skills", "Interpersonal Skills", "Certifications", "Projects", "Contact"].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase().replace(' ', '-')}`}
@@ -226,6 +227,11 @@ const Index = () => {
       {/* Interpersonal Skills Section */}
       <div id="interpersonal-skills">
         <InterpersonalSkills />
+      </div>
+
+      {/* Certifications Section */}
+      <div id="certifications">
+        <Certifications />
       </div>
 
       {/* Projects Section */}
