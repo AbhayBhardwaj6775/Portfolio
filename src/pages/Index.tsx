@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, Github, ExternalLink, Mail, Phone, MapPin, Download, Code, Brain, Database, Zap } from 'lucide-react';
@@ -11,6 +12,7 @@ import ContactSection from '@/components/ContactSection';
 import InterpersonalSkills from '@/components/InterpersonalSkills';
 import TechnicalSkills from '@/components/TechnicalSkills';
 import Certifications from '@/components/Certifications';
+import AcademicProjects from '@/components/AcademicProjects';
 
 const Index = () => {
   const [currentRole, setCurrentRole] = useState(0);
@@ -83,7 +85,7 @@ const Index = () => {
               Abhay Bhardwaj
             </motion.h1>
             <div className="hidden md:flex space-x-6">
-              {["About", "Technical Skills", "Interpersonal Skills", "Certifications", "Projects", "Contact"].map((item) => (
+              {["About", "Technical Skills", "Interpersonal Skills", "Certifications", "Academic Projects", "Projects", "Contact"].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase().replace(' ', '-')}`}
@@ -232,6 +234,11 @@ const Index = () => {
       {/* Certifications Section */}
       <div id="certifications">
         <Certifications />
+      </div>
+
+      {/* Academic Projects Section */}
+      <div id="academic-projects">
+        <AcademicProjects />
       </div>
 
       {/* Projects Section */}
