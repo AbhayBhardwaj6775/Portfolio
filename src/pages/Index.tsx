@@ -10,6 +10,7 @@ import TechnicalSkills from '@/components/TechnicalSkills';
 import Certifications from '@/components/Certifications';
 import AcademicProjects from '@/components/AcademicProjects';
 import Internships from '@/components/Internships';
+import Achievements from '@/components/Achievements';
 
 const Index = () => {
   const [currentRole, setCurrentRole] = useState(0);
@@ -47,7 +48,7 @@ const Index = () => {
               Abhay Bhardwaj
             </motion.h1>
             <div className="hidden md:flex space-x-6">
-              {["About", "Technical Skills", "Interpersonal Skills", "Certifications", "Academic Projects", "Internships", "Contact"].map((item) => (
+              {["About", "Technical Skills", "Interpersonal Skills", "Certifications", "Academic Projects", "Internships", "Achievements", "Contact"].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase().replace(' ', '-')}`}
@@ -206,6 +207,11 @@ const Index = () => {
       {/* Internships Section */}
       <div id="internships">
         <Internships />
+      </div>
+
+      {/* Achievements Section */}
+      <div id="achievements">
+        <Achievements />
       </div>
 
       {/* Contact Section */}
