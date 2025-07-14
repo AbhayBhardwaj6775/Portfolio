@@ -24,7 +24,8 @@ const TechnicalSkills = () => {
       skills: [
         { name: "HTML", level: "Advanced" },
         { name: "CSS", level: "Advanced" },
-        { name: "JavaScript", level: "Advanced" }
+        { name: "JavaScript", level: "Advanced" },
+        { name: "React", level: "Intermediate" }
       ]
     },
     {
