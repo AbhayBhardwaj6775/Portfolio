@@ -12,8 +12,8 @@ const TechnicalSkills = () => {
       color: "text-cyan-400",
       skills: [
         { name: "C", level: "Intermediate" },
-        { name: "C++", level: "Advanced" },
-        { name: "Java", level: "Intermediate" },
+        { name: "C++", level: "Intermediate" },
+        { name: "Java", level: "Advanced" },
         { name: "Python", level: "Advanced" }
       ]
     },
